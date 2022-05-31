@@ -1,16 +1,14 @@
 import React, {useState} from 'react'
 import css from './Home.module.css'
 import img from '../Img/gitgub-redonda.png'
-import ecommerceImg from './../Img/Captura-ecommerce.png'
-import dogImg from './../Img/Captura-Dogs-App.png'
 import Cards from '../Cards/Cards'
 
 
 function Home() {
-  const [projects] = useState({
-    ecommerce : {img:'Captura-ecommerce.png', name: 'Ecommerce-App', gitHubLink: '', deployLink:'https://clothes-22.vercel.app' },
-    dogs : {img: dogImg, name: 'Dogs-App', gitHubLink: '', deployLink:'https://dogs-lilac-nu.vercel.app' }
-  })
+  const [projects] = useState([
+    {img:'ecommerce', name: 'Ecommerce-App', gitHubLink: '', deployLink:'https://clothes-22.vercel.app' },
+    {img: 'dogs', name: 'Dogs-App', gitHubLink: '', deployLink:'https://dogs-lilac-nu.vercel.app' }
+  ])
   const [spanish] = useState({
     subTitle:'Frontend developer viviendo en Buenos Aires, Argentina',
     description:'Apasionado por el desarrollo web. Aprendizaje constante de nuevas tecnologías. Mas abajo podras ver algunos de mis proyectos.'
@@ -30,19 +28,21 @@ function Home() {
       <h4>{language === 'Es'?'Frontend developer based in Buenos Aires, Argentina': spanish.subTitle}</h4>
       <h4>{language === 'Es'?'Passionate about web development. Always learning new technologies. Here you will see some of projects.':spanish.description}</h4>
       <h2>{language === 'Es'?'Projects':'Proyectos'}</h2>
-      {/* <img src={ecommerceImg} alt="hola" /> */}
-      <Cards 
-      img={projects.ecommerce.img}
-      name={projects.ecommerce.name}
-      gitHubLink={projects.ecommerce.gitHubLink}
-      deployLink={projects.ecommerce.deployLink}
-      />
-      {/* <Cards 
-      img={projects.dogs.img}
-      name={projects.dogs.name}
-      gitHubLink={projects.dogs.gitHubLink}
-      deployLink={projects.dogs.deployLink}
-      /> */}
+
+  <div className={css.cardContainer}>   
+    {projects.map(e=>{
+      return(
+        <Cards 
+          key={e.name}
+          img={e.img}
+          name={e.name}
+          gitHubLink={e.gitHubLink}
+          deployLink={e.deployLink}
+        />
+      )
+    }) }
+      
+  </div>  
     </div>
   )
 }
