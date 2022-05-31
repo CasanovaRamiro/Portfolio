@@ -1,16 +1,16 @@
 import React, {useState} from 'react'
 import css from './Home.module.css'
-import img from '../img/gitgub-redonda.png'
-import ecommerceImg from '../img/Captura-ecommerce.png'
-import dogImg from '../img/Captura-Dogs-App.png'
+import img from '../assets/img/gitgub-redonda.png'
+// import ecommerceImg from '../assets/img/Captura-ecommerce.png'
+// import dogImg from '../assets/img/Captura-Dogs-App.png'
 import Cards from '../Cards/Cards'
 
 
 function Home() {
-  const [projects] = useState({
-    ecommerce : {img: ecommerceImg, name: 'Ecommerce-App', gitHubLink: '', deployLink:'https://clothes-22.vercel.app' },
-    dogs : {img: dogImg, name: 'Dogs-App', gitHubLink: '', deployLink:'https://dogs-lilac-nu.vercel.app' }
-  })
+  // const [projects] = useState({
+  //   ecommerce : {img: ecommerceImg, name: 'Ecommerce-App', gitHubLink: '', deployLink:'https://clothes-22.vercel.app' },
+  //   dogs : {img: dogImg, name: 'Dogs-App', gitHubLink: '', deployLink:'https://dogs-lilac-nu.vercel.app' }
+  // })
   const [spanish] = useState({
     subTitle:'Frontend developer viviendo en Buenos Aires, Argentina',
     description:'Apasionado por el desarrollo web. Aprendizaje constante de nuevas tecnologías. Mas abajo podras ver algunos de mis proyectos.'
@@ -31,18 +31,18 @@ function Home() {
       <h4>{language === 'Es'?'Passionate about web development. Always learning new technologies. Here you will see some of projects.':spanish.description}</h4>
       <h2>{language === 'Es'?'Projects':'Proyectos'}</h2>
       {/* <img src={ecommerceImg} alt="hola" /> */}
-      <Cards 
+      {/* <Cards 
       img={projects.ecommerce.img}
       name={projects.ecommerce.name}
       gitHubLink={projects.ecommerce.gitHubLink}
       deployLink={projects.ecommerce.deployLink}
-      />
-      <Cards 
+      /> */}
+      {/* <Cards 
       img={projects.dogs.img}
       name={projects.dogs.name}
       gitHubLink={projects.dogs.gitHubLink}
       deployLink={projects.dogs.deployLink}
-      />
+      /> */}
     </div>
   )
 }
