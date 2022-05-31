@@ -8,7 +8,7 @@ import Cards from '../Cards/Cards'
 
 function Home() {
   const [projects] = useState({
-    ecommerce : {img: ecommerceImg, name: 'Ecommerce-App', gitHubLink: '', deployLink:'https://clothes-22.vercel.app' },
+    ecommerce : {img:'Captura-ecommerce.png', name: 'Ecommerce-App', gitHubLink: '', deployLink:'https://clothes-22.vercel.app' },
     dogs : {img: dogImg, name: 'Dogs-App', gitHubLink: '', deployLink:'https://dogs-lilac-nu.vercel.app' }
   })
   const [spanish] = useState({
