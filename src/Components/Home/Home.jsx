@@ -1,8 +1,8 @@
 import React, {useState} from 'react'
 import css from './Home.module.css'
 import img from '../assets/img/gitgub-redonda.png'
-import ecommerceImg from '../assets/img/Captura-ecommerce.png'
-import dogImg from '../assets/img/Captura-Dogs-App.png'
+import ecommerceImg from './../assets/img/Captura-ecommerce.png'
+import dogImg from './../assets/img/Captura-Dogs-App.png'
 import Cards from '../Cards/Cards'
 
 
