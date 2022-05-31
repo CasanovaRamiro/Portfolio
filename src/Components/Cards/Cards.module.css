@@ -3,8 +3,10 @@
     height: 150px;
     background-size: cover;
     border: 1px solid #fff;
+    border-radius: 10px;
 }
 .layout {
+    border-radius: 10px;
     position:fixed ;
     width: 300px;
     height: 150px;
@@ -14,12 +16,28 @@
 .layout:hover{
     background-color: rgba(0, 0, 0, 0.713);
 }
+
 .link{
     color: white
 }
-.cardContainer{
+.iconContainer{
+    margin: auto;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.icon {
+    background-color: rgb(220, 214, 214);
+    padding: 2px;
+    margin: 5px;
+    border: 1px black solid;
+    border-radius: 10px;
+    width: 30px;
+    height: 30px;
+    transition: 0.1s;
+}
+.icon:hover{
+    transform: scale(1.05);
 }

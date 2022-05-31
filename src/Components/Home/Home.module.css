@@ -3,14 +3,36 @@
     flex-direction: column;
     justify-content: flex-start;
     margin: auto;
-    width: 1000px;
+    width: 800px;
     max-width: 100%;
-    padding: 20px;
-    border: 2px solid red;
+    /* padding: 20px; */
     position: relative;
+}
+.translateButton{
+    margin-top: 20px;
+    width: 90%;
+    display: flex;
+    justify-content: end;
+}
+.translateButton button {
+    width: 30px;
+    padding: 5px;
+    border-radius: 50%;
+    font-size: 12px;
+    color: #fff;
+    font-weight: 600;
+    background-color: rgba(0, 0, 0, 0.532);
+    border: 2px solid rgb(214, 209, 209);
+    transition: 0.2s;
+}
+.translateButton button:hover {
+    transform: scale(1.03);
+    font-size: 12px;
+    font-weight: 600;
 }
 
 .titleImg {
+    margin-top: 0px;
     width: 800px;
     max-width: 90%;
     display: flex;
@@ -22,27 +44,28 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid red;
     width: 400px;
     max-width: 100%;
     justify-content: space-around;
     flex-wrap: wrap;
    
 }
-.title button {
-    padding: 5px;
-    border-radius: 50%;
-    font-size: 12px;
-    color: #fff;
-    font-weight: 600;
-    background-color: rgba(0, 0, 0, 0.532);
-    border: 2px solid rgb(214, 209, 209);
-    transition: 0.2s;
+
+.titleSubTitle{
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    padding: 0px;
+    
 }
-.title button:hover {
-    transform: scale(1.03);
-    font-size: 12px;
-    font-weight: 600;
+.titleSubTitle h1{
+    margin: 0px;
+    padding: 0px;
+}
+.titleSubTitle h4{
+    margin: 0px;
+    padding: 0px;
+    font-weight: 300;
 }
 .img{
     border: 2px solid rgba(255, 255, 255, 0.759);
@@ -53,4 +76,13 @@
 .img img{
     width: 100px;
     height: 100px;
+}
+.cardContainer{
+    margin: auto;
+    width: 700px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
