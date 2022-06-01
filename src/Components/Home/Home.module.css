@@ -29,21 +29,27 @@
     transform: scale(1.03);
     font-size: 12px;
     font-weight: 600;
+    cursor: pointer;
 }
 
 .titleImg {
     margin-top: 0px;
+    margin-left: 0px;
     width: 800px;
     max-width: 90%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: start;
+    transition: 0.5s;
+}
+.titleImg:hover {
+    color: rgb(255, 255, 255);
 }
 .title{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     width: 400px;
     max-width: 100%;
     justify-content: space-around;
@@ -72,8 +78,15 @@
     border-radius: 50%;
     width: 100px;
     height: 100px;
+    transition: 0.2s;
+}
+.img:hover{
+    border: 2px solid rgba(255, 255, 255, 0.938);
+    box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.315);
+
 }
 .img img{
+    border-radius: 50%;
     width: 100px;
     height: 100px;
 }
@@ -85,4 +98,32 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+}
+.description {
+    font-weight: 400;
+}
+.projects h2 {
+    width: 100%;
+    font-weight: 600;
+    padding-bottom: 10px;
+    transition: 0.5s;
+    margin-bottom: 20px;
+    border-bottom: solid 2px transparent;
+    border-bottom: solid 2px rgba(203, 199, 199, 0.759);
+
+}
+.projects:hover h2 {
+    border-bottom: solid 2px rgb(255, 255, 255);
+}
+.technologies h2{
+    width: 100%;
+    font-weight: 600;
+    padding-bottom: 10px;
+    transition: 0.5s;
+    margin-bottom: 20px;
+    border-bottom: solid 2px transparent;
+    border-bottom: solid 2px rgba(203, 199, 199, 0.759);
+}
+.technologies:hover h2 {
+    border-bottom: solid 2px rgb(255, 255, 255);
 }
