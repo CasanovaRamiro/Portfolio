@@ -98,6 +98,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
 }
 .description {
     font-weight: 400;
