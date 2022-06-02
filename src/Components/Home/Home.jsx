@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import css from "./Home.module.css";
 import img from "../Img/gitgub4.jpeg";
 import Cards from "../Cards/Cards";
+import Technologies from "../Technologies/Technologies";
 
 function Home() {
   const [projects] = useState([
@@ -73,7 +74,9 @@ function Home() {
       </div>
       <div className={css.technologies}>
       <h2>{language === "EN" ? "Technologies" : "Tecnologias"}</h2>
-
+          <Technologies
+          language = {language}
+          />
       </div>
     </div>
   );
