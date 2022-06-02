@@ -3,6 +3,11 @@ import css from "./Home.module.css";
 import img from "../Img/gitgub4.jpeg";
 import Cards from "../Cards/Cards";
 import Technologies from "../Technologies/Technologies";
+import {SiLinkedin, SiGithub} from 'react-icons/si'
+import {FaFilePdf} from 'react-icons/fa'
+import {MdLanguage} from 'react-icons/md'
+
+
 
 function Home() {
   const [projects] = useState([
@@ -34,15 +39,27 @@ function Home() {
   };
   return (
     <div className={css.container}>
-      <div className={css.translateButton}><button onClick={() => handleTranslate()}>{language}</button></div>
+      <div onClick={() => handleTranslate()} className={css.translateButton}>
+        <span><MdLanguage size='30px'/></span>
+        <h4>{language === 'EN'? 'English': 'Español'}</h4>
+      </div>
       <div className={css.titleImg}>
-         <div className={css.img}>
-          <img src={img} alt="Profile Pic" />
+        <div className={css.imgContainer}>
+          <div className={css.img}>
+            <img src={img} alt="Profile Pic" />
+          </div>
+          <div className={css.iconContainer}>
+          <span><SiLinkedin size={'30px'}/></span>
+          <span><SiGithub size={'30px'}/></span>
+          <span><FaFilePdf size={'30px'}/></span>
+          </div>
         </div>
+         
         <div className={css.title}>
           <div className={css.titleSubTitle}>
             <h1>Ramiro Casanova</h1>
             <h4>
+              
               {language === "EN"
                 ? "Frontend developer based in Buenos Aires, Argentina"
                 : spanish.subTitle}

@@ -13,25 +13,23 @@
     width: 90%;
     display: flex;
     justify-content: end;
-}
-.translateButton button {
-    width: 30px;
-    padding: 5px;
-    border-radius: 50%;
-    font-size: 12px;
-    color: #fff;
-    font-weight: 600;
-    background-color: rgba(0, 0, 0, 0.532);
-    border: 2px solid rgb(214, 209, 209);
-    transition: 0.2s;
-}
-.translateButton button:hover {
-    transform: scale(1.03);
-    font-size: 12px;
-    font-weight: 600;
+    align-items: center;
     cursor: pointer;
+    transition: 0.5s;
+}
+.translateButton:hover{
+    color: rgb(255, 255, 255);
 }
 
+.translateButton:hover span{
+    transform: scale(1.05);
+    font-weight: 600;
+}
+
+.translateButton h4{
+    font-weight: 600;
+    width: 40px;
+}
 .titleImg {
     margin-top: 0px;
     margin-left: 0px;
@@ -136,4 +134,53 @@
 }
 .technologies:hover h2 {
     border-bottom: solid 2px rgb(255, 255, 255);
+}
+.imgContainer{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.iconContainer{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.iconContainer span{
+    cursor: pointer;
+    transition: 0.2s;
+}
+.iconContainer span:hover{
+    transform: scale(1.2);
+}
+
+@media (max-width: 650px) {
+    .imgContainer{
+        width: 120px;
+        margin: auto;        
+    }
+    .img{
+        margin: auto;
+    }
+    .title{
+        margin: auto;
+    }
+    .titleImg{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .titleSubTitle{
+        align-items: center;
+    }
+    h4{
+        text-align: center;
+    }
+    .projects h2{
+        text-align: center;
+    }
+    .technologies h2{
+        text-align: center;
+    }
+    .projects h2{
+        text-align: center;
+    }
 }
