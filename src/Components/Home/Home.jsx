@@ -49,9 +49,9 @@ function Home() {
             <img src={img} alt="Profile Pic" />
           </div>
           <div className={css.iconContainer}>
-          <span><SiLinkedin size={'30px'}/></span>
-          <span><SiGithub size={'30px'}/></span>
-          <span><FaFilePdf size={'30px'}/></span>
+          <span><a style={{ textDecoration: "none", color: 'rgb(255, 255, 255)'}} target="_blank" href='https://www.linkedin.com/in/ramiro-casanova'><SiLinkedin size={'30px'}/></a></span>
+          <span><a style={{ textDecoration: "none", color: 'rgb(255, 255, 255)'}} target="_blank" href='https://www.linkedin.com/in/ramiro-casanova'><SiGithub size={'30px'}/></a></span>
+          <span><a style={{ textDecoration: "none", color: 'rgb(255, 255, 255)'}} target="_blank" href='https://www.linkedin.com/in/ramiro-casanova'><FaFilePdf size={'30px'}/></a></span>
           </div>
         </div>
          

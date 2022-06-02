@@ -145,9 +145,12 @@
     justify-content: space-between;
     margin-top: 10px;
 }
+
 .iconContainer span{
     cursor: pointer;
     transition: 0.2s;
+    color: rgba(255, 255, 255, 0.759);
+
 }
 .iconContainer span:hover{
     transform: scale(1.2);
@@ -182,5 +185,19 @@
     }
     .projects h2{
         text-align: center;
+    }
+}
+
+@media (min-width: 1000px){
+    body{
+        padding-top: 30px;
+        transform: scale(1.1);
+    }
+}
+
+@media (min-width: 1200px){
+    body{
+        padding-top: 70px;
+        transform: scale(1.2);
     }
 }
