@@ -194,14 +194,14 @@
     }
 }
 
-@media (min-width: 1250px){
+@media (min-width: 1450px){
     body{
         padding-top: 30px;
         transform: scale(1.1);
     }
 }
 
-@media (min-width: 1450px){
+@media (min-width: 1850px){
     body{
         padding-top: 70px;
         transform: scale(1.2);
