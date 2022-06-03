@@ -188,6 +188,12 @@
     }
 }
 
+@media (max-width: 650px){
+    .cardContainer{
+        flex-direction: column;
+    }
+}
+
 @media (min-width: 1250px){
     body{
         padding-top: 30px;
