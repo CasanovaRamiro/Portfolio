@@ -99,7 +99,7 @@ function Home() {
               <a
                 style={{ textDecoration: "none", color: "rgb(255, 255, 255)" }}
                 target="_blank"
-                href="https://www.linkedin.com/in/ramiro-casanova"
+                href="https://docs.google.com/document/d/1DqOwwVHV_OoW2KHo0cQISzs63r_nIlgPo0NDadsyiPQ/edit?usp=sharing"
               >
                 <FaFilePdf size={"30px"} />
               </a>
