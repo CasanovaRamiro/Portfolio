@@ -66,6 +66,7 @@
 
 .titleSubTitle{
     display: flex;
+    align-items: flex-start;
     flex-direction: column;
     margin: 0px;
     padding: 0px;
@@ -192,6 +193,9 @@
     .cardContainer{
         flex-direction: column;
     }
+}
+body {
+    overflow-x: hidden;
 }
 
 @media (min-width: 1450px){
