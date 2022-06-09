@@ -54,6 +54,7 @@ function Home() {
     subTitle: "Frontend developer viviendo en Buenos Aires, Argentina",
     description:
       "Apasionado por el desarrollo web. Aprendizaje constante de nuevas tecnologías. Mas abajo podras ver algunos de mis proyectos.",
+      
   });
   const [language, setLanguage] = useState("EN");
   const handleTranslate = () => {
@@ -99,7 +100,7 @@ function Home() {
               <a
                 style={{ textDecoration: "none", color: "rgb(255, 255, 255)" }}
                 target="_blank"
-                href="https://drive.google.com/file/d/1YR22RgyjJN4alHqIV1JgqDoMuDsPRx6a/view?usp=sharing"
+                href={language === "EN" ? "https://drive.google.com/file/d/122oBg_fv3QlrCmlYoXr-q43tY3F6uUJN/view?usp=sharing": "https://drive.google.com/file/d/1rn00SmlnOaV_KOk_twruFsYWkRn1k1fr/view?usp=sharing"}
               >
                 <FaFilePdf size={"30px"} />
               </a>
