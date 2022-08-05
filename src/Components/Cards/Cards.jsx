@@ -2,7 +2,7 @@ import React,{useState} from "react";
 import css from "./Cards.module.css";
 import dogsImage from '../Img/Captura-Dogs-App.png'
 import ecommerceImage from '../Img/Captura-ecommerce.png'
-import ITCrowd from '../Img/ITCrowd.png'
+import ITCrowd from '../Img/ItCrowd.png'
 import{FaExternalLinkAlt, } from 'react-icons/fa'
 import { SiGithub} from 'react-icons/si'
 import { BsInfoLg} from 'react-icons/bs'
