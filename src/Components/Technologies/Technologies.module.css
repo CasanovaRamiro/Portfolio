@@ -4,19 +4,21 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    align-items: center;
+    align-items: start;
 }
 .techContainer{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     width: 250px;
-    height: 400px;
+    height: auto;
     border: solid 2px rgba(203, 199, 199, 0.759);
     border-radius: 20px;
     margin-bottom: 20px;
     flex-direction: column;
     transition: 0.2s;
+    padding-bottom: 10px;
+
 }
 .techContainer:hover{
     border: solid 2px rgb(255, 255, 255);

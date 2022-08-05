@@ -49,6 +49,26 @@ function Home() {
         "Tecnologías utilizadas: React, Express, sequelize y PostgreSQL",
       ],
     },
+    {
+      img: "ITCrowd",
+      name: "ITCrowd-Challenge",
+      gitHubLink: "https://github.com/CasanovaRamiro/itCrowdChallenge",
+      deployLink: "https://casanova-ramiro-itcrowd-challenge.vercel.app",
+      infoEnglish: [
+        "Develop a fullstack app to display information about Products.",
+        "Modify, Delete and Create Products and Brands.",
+        "Admin Menu.",
+        "Formik Forms.",
+        "Tech Stack: React, Express, sequelize and PostgreSQL",
+      ],
+      infoEspañol: [
+        "Programar una app Full-Stack que muestre información detallada sobre Productos.",
+        "Modificar, Eliminar y Crear productos y marcas.",
+        "Menu Adminstrador.",
+        "Formularios con Formik",
+        "Tecnologías utilizadas: React, Express, sequelize y PostgreSQL",
+      ],
+    },
   ]);
   const [spanish] = useState({
     subTitle: "Frontend developer viviendo en Buenos Aires, Argentina",

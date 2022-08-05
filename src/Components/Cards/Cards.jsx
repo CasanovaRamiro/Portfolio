@@ -2,6 +2,7 @@ import React,{useState} from "react";
 import css from "./Cards.module.css";
 import dogsImage from '../Img/Captura-Dogs-App.png'
 import ecommerceImage from '../Img/Captura-ecommerce.png'
+import ITCrowdImage from '../Img/ITCrowd.png'
 import{FaExternalLinkAlt, } from 'react-icons/fa'
 import { SiGithub} from 'react-icons/si'
 import { BsInfoLg} from 'react-icons/bs'
@@ -23,6 +24,8 @@ function Cards({ img, name, gitHubLink, deployLink, infoEspañol, infoEnglish , 
     let image
     if(img === 'ecommerce'){image = ecommerceImage}
     if(img === 'dogs'){image = dogsImage}
+    if(img === 'ITCrowd'){image = ITCrowdImage}
+    
   return (
     <div className={css.contDeCont}>
       {infoModal? <div className={css.overlay}><div className={css.overlay} onClick={()=>handleInfoModal()}></div>
