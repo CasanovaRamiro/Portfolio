@@ -200,14 +200,14 @@ body {
 
 @media (min-width: 1450px){
     body{
-        padding-top: 30px;
+        padding-top: 60px;
         transform: scale(1.1);
     }
 }
 
 @media (min-width: 1850px){
     body{
-        padding-top: 70px;
+        padding-top: 100px;
         transform: scale(1.2);
     }
 }
