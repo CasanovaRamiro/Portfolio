@@ -5,7 +5,7 @@ import Cards from "../Cards/Cards";
 import Technologies from "../Technologies/Technologies";
 import { SiLinkedin, SiGithub } from "react-icons/si";
 import { FaFilePdf } from "react-icons/fa";
-import { MdLanguage } from "react-icons/md";
+import Language from "../Language/Language";
 
 function Home() {
   const [projects] = useState([
@@ -71,9 +71,9 @@ function Home() {
     },
   ]);
   const [spanish] = useState({
-    subTitle: "Frontend developer viviendo en Buenos Aires, Argentina",
+    subTitle: "FullStack Dev.",
     description:
-      "Apasionado por el desarrollo web. Aprendizaje constante de nuevas tecnologías. Mas abajo podras ver algunos de mis proyectos.",
+      "Apasionado por el desarrollo web. Aprendizaje constante de nuevas tecnologías. Mas abajo podras ver algunos de mis proyectos. Viviendo en Buenos Aires, Argentina",
       
   });
   const [language, setLanguage] = useState("EN");
@@ -86,12 +86,10 @@ function Home() {
   };
   return (
     <div className={css.container}>
-      <div onClick={() => handleTranslate()} className={css.translateButton}>
-        <span>
-          <MdLanguage size="30px" />
-        </span>
-        <h4>{language === "EN" ? "English" : "Español"}</h4>
-      </div>
+      <Language
+        handleTranslate={handleTranslate}
+        language={language}
+      />
       <div className={css.titleImg}>
         <div className={css.imgContainer}>
           <div className={css.img}>
@@ -100,7 +98,7 @@ function Home() {
           <div className={css.iconContainer}>
             <span>
               <a
-                style={{ textDecoration: "none", color: "rgb(255, 255, 255)" }}
+                style={{ textDecoration: "none", color: "var(--main-white)" }}
                 target="_blank"
                 href="https://www.linkedin.com/in/ramiro-casanova"
               >
@@ -109,7 +107,7 @@ function Home() {
             </span>
             <span>
               <a
-                style={{ textDecoration: "none", color: "rgb(255, 255, 255)" }}
+                style={{ textDecoration: "none", color: "var(--main-white)" }}
                 target="_blank"
                 href="https://github.com/CasanovaRamiro"
               >
@@ -118,7 +116,7 @@ function Home() {
             </span>
             <span>
               <a
-                style={{ textDecoration: "none", color: "rgb(255, 255, 255)" }}
+                style={{ textDecoration: "none", color: "var(--main-white)" }}
                 target="_blank"
                 href={language === "EN" ? "https://drive.google.com/file/d/17G4xXmXK8Tz4U1PNwxrZT8KK3m98806B/view?usp=sharing": "https://drive.google.com/file/d/10-DHGMqjUjwetda0DjqDj9hi-LPMhKDd/view?usp=sharing"}
               >
@@ -133,7 +131,7 @@ function Home() {
             <h1>Ramiro Casanova</h1>
             <h4>
               {language === "EN"
-                ? "Frontend developer based in Buenos Aires, Argentina"
+                ? "FullStack Dev."
                 : spanish.subTitle}
             </h4>
           </div>
@@ -141,7 +139,7 @@ function Home() {
       </div>
       <h4 className={css.description}>
         {language === "EN"
-          ? "Passionate about web development. Always learning new technologies. Here you will see some of projects."
+          ? "Passionate about web development. Always learning new technologies. Here you will see some of projects. Based in Buenos Aires, Argentina"
           : spanish.description}
       </h4>
       <div className={css.projects}>

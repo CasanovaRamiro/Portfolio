@@ -23,6 +23,7 @@ function Technologies({language}) {
                 <div className={css.icon}><h5><DiHtml5 size='50px'/></h5><h5 className={css.abs}>HTML 5</h5></div>
                 <div className={css.icon}><h5><SiGit size='50px'/></h5><h5 className={css.abs}>Git</h5></div>
                 <div className={css.icon}><h5><TbBrandNextjs size='50px'/></h5><h5 className={css.abs}>Next.js</h5></div>
+                <div className={css.icon}><h5><SiTypescript size='50px'/></h5><h5 className={css.abs}>TypeScript</h5></div>
             </div>
         </div>
 
@@ -37,6 +38,7 @@ function Technologies({language}) {
                 <div className={css.icon}><h5><SiGit size='50px'/></h5><h5 className={css.abs}>Git</h5></div>
                 <div className={css.icon}><h5><SiMongodb size='50px'/></h5><h5 className={css.abs}>MongoDB</h5></div>
                 <div className={css.icon}><h5><SiNestjs size='50px'/></h5><h5 className={css.abs}>Nest.js</h5></div>
+                <div className={css.icon}><h5><SiTypescript size='50px'/></h5><h5 className={css.abs}>TypeScript</h5></div>
             </div>
         </div>
 
@@ -44,7 +46,6 @@ function Technologies({language}) {
             <h3>{language=== 'EN' ? 'In Progress' : 'En Progreso'}</h3>
             <div className={css.iconSection}>   
                 <div className={css.icon}><h5><SiJava size='50px'/></h5><h5 className={css.abs}>Java</h5></div>
-                <div className={css.icon}><h5><SiTypescript size='50px'/></h5><h5 className={css.abs}>TypeScript</h5></div>
                 <div className={css.icon}><h5><SiGraphql size='50px'/></h5><h5 className={css.abs}>GraphQL</h5></div>
                 <div className={css.icon}><h5><SiApollographql size='50px'/></h5><h5 className={css.abs}>Apollo</h5></div>
             </div>
