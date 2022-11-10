@@ -36,22 +36,28 @@
 
 .icon {
     text-align: center;
-    background-color: transparent;
     padding: 2px;
     margin: 5px;
-    border: 2px var(--border-gray) solid;
+    background-color: transparent;
+    border: 1.5px transparent solid;
+    color: transparent;
     border-radius: 10px;
     width: 40px;
     height: 40px;
     transition: 0.2s;
 }
+.container:hover .icon{
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1.5px white solid;
+    color: white;
+} 
 .icon:hover{
-    color: rgb(17, 17, 17);
-    border: 2px solid rgb(23, 22, 22);
+    color: rgb(17, 17, 17) !important;
+    border: 1.5px solid rgb(23, 22, 22)!important;
     font-weight: 700;
     transform: scale(1.05);
-    background-color: var(--main-white);
-    box-shadow: 1px 1px 10px var(--border-gray);
+    background-color: var(--main-white)!important;
+    box-shadow: 1px 1px 10px var(--border-gray)!important;
 }
 
 

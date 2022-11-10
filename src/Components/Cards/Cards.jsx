@@ -12,10 +12,6 @@ import useMediaQuery from "../../Hooks/useMediaQuery";
 
 
 function Cards({ img, name, gitHubLink, deployLink, infoEspañol, infoEnglish , language}) {
-    const [icons, setIcons]=useState(false)
-    const handleIcons = ()=>{
-        setIcons(!icons)
-    }
     const [infoModal, setInfoModal]=useState(false)
     const handleInfoModal=()=>{
       setInfoModal(!infoModal)
@@ -42,18 +38,16 @@ function Cards({ img, name, gitHubLink, deployLink, infoEspañol, infoEnglish , 
       </div>:null}
       <div className={css.container} style={{ backgroundImage: `url(${image})` }}>
         <div className={css.layout}>
-         {alt? <div className={css.iconContainer} onMouseEnter={()=>handleIcons()} onMouseLeave={()=>handleIcons()} >
-              {icons && <a className={css.link} target="_blank" href={deployLink}>
+         {alt? <div className={css.iconContainer} >
+              <a className={css.link} target="_blank" href={deployLink}>
                   <h1 className={css.icon}><FaExternalLinkAlt size='30px'/></h1>
-              </a>}
-              
-            {icons && <a className={css.link} target="_blank" href={gitHubLink}>
+              </a>
+             <a className={css.link} target="_blank" href={gitHubLink}>
                   <h1 className={css.icon}><SiGithub size='30px'/></h1>
-              </a>}
-
-              {icons && <a className={css.link} target="_blank" onClick={()=>handleInfoModal()}>
+              </a>
+              <a className={css.link} target="_blank" onClick={()=>handleInfoModal()}>
                   <h1 className={css.icon}><BsInfoLg size='30px'/></h1>
-              </a>}
+              </a>
           </div>: null}
         </div>
         
