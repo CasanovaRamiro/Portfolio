@@ -26,7 +26,7 @@
     color: var(--main-white);
     border-bottom: solid 2px var(--main-white);
 }
-.titleImg:hover .img {
+.imgContainer:hover .img {
     border: 2px solid var(--main-white);
     box-shadow: 1px 1px 10px var(--border-gray);
 }
