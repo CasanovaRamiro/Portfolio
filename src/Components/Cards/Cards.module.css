@@ -141,11 +141,9 @@
         border: solid 1px var(--main-white);
         box-shadow: 1px 1px 10px var(--border-gray);
     }
-    /* .iconContainer{
-        border: solid 1px blueviolet;
-        position: absolute;
-        width: 100%;
-        height: 147%;
-        align-items: flex-end;
-    } */
+    .icon{
+        background-color: transparent;
+        border: 1.5px white solid;
+        color: white;
+    } 
 }
