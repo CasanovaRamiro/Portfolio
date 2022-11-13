@@ -1,0 +1,83 @@
+.container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 10px;
+  top: 0;
+}
+.container span {
+  width: fit-content;
+  height: fit-content;
+  transition: 0.5s;
+  border: var(--border-gray) solid 1px;
+  padding-top: 5px;
+  border-radius: 20%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.container input[type="checkbox"].iosSwitch:checked + div + span {
+  box-shadow: 1px 1px 10px #3b88ec8f;
+  /* color: #3b89ec; */
+  border: 1px solid #3b89ec;
+}
+
+.container input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+}
+
+/* Normal Track */
+.container input[type="checkbox"].iosSwitch + div {
+  vertical-align: middle;
+  width: 40px;
+  height: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 999px;
+  background-color: rgba(136, 135, 135, 0.623);
+  transition-duration: 0.4s;
+  transition-property: background-color, box-shadow;
+  -webkit-transition-duration: 0.4s;
+  -webkit-transition-property: background-color, box-shadow;
+  box-shadow: inset 0 0 0 0px rgba(0, 0, 0, 0.4);
+  margin: 15px 1.2em 15px 2.5em;
+}
+
+/* Checked Track (Blue) */
+.container input[type="checkbox"].iosSwitch:checked + div {
+  width: 40px;
+  background-position: 0 0;
+  background-color: #3b89ec;
+  border: 1px solid #0e62cd;
+  box-shadow: inset 0 0 0 10px rgba(59, 137, 259, 1);
+}
+
+/* Normal Knob */
+.container input[type="checkbox"].iosSwitch + div > div {
+  float: left;
+  width: 18px;
+  height: 18px;
+  border-radius: inherit;
+  background: #ffffff;
+  transition-timing-function: cubic-bezier(0.54, 1.85, 0.5, 1);
+  transition-duration: 0.4s;
+  transition-property: transform, background-color, box-shadow;
+  -webkit-transition-timing-function: cubic-bezier(0.54, 1.85, 0.5, 1);
+  -webkit-transition-duration: 0.4s;
+  -webkit-transition-property: transform, background-color, box-shadow;
+  -moz-transition-timing-function: cubic-bezier(0.54, 1.85, 0.5, 1);
+  -moz-transition-duration: 0.4s;
+  -moz-transition-property: transform, background-color;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3), 0px 0px 0 1px rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+  margin-top: 1px;
+  margin-left: 1px;
+}
+
+/* Checked Knob (Blue Style) */
+.container input[type="checkbox"].iosSwitch:checked + div > div {
+  transform: translate3d(20px, 0, 0);
+  -webkit-transform: translate3d(20px, 0, 0);
+  -moz-transform: translate3d(20px, 0, 0);
+  background-color: #ffffff;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3), 0px 0px 0 1px rgb(18, 22, 27);
+}

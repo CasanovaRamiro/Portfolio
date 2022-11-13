@@ -1,21 +1,19 @@
 import React, { useState } from "react";
 import css from "./Home.module.css";
 import img from "../Img/gitgub4.jpeg";
-import Cards from "../Cards/Cards";
 import Technologies from "../Technologies/Technologies";
 import { SiLinkedin, SiGithub } from "react-icons/si";
 import { FaFilePdf } from "react-icons/fa";
 import Language from "../Language/Language";
-import useProjectsInfo from "../../Hooks/useProjectsInfo";
-import {linkedIn, CvPdfEnglish, CvPdfSpanish} from './links'
+import { linkedIn, CvPdfEnglish, CvPdfSpanish } from './links'
+import Projects from "../Projects/Projects";
 
 function Home() {
-  const projects = useProjectsInfo()
   const [spanish] = useState({
     subTitle: "FullStack Dev.",
     description:
       "Apasionado por el desarrollo web. Aprendizaje constante de nuevas tecnologías. Mas abajo podras ver algunos de mis proyectos. Viviendo en Buenos Aires, Argentina",
-      
+
   });
   const [language, setLanguage] = useState("EN");
   const handleTranslate = () => {
@@ -59,7 +57,7 @@ function Home() {
               <a
                 style={{ textDecoration: "none", color: "var(--main-white)" }}
                 target="_blank"
-                href={language === "EN" ? CvPdfEnglish: CvPdfSpanish}
+                href={language === "EN" ? CvPdfEnglish : CvPdfSpanish}
               >
                 <FaFilePdf size={"30px"} />
               </a>
@@ -83,25 +81,9 @@ function Home() {
           ? "Passionate about web development. Always learning new technologies. Here you will see some of projects. Based in Buenos Aires, Argentina"
           : spanish.description}
       </h4>
-      <div className={css.projects}>
-        <h2>{language === "EN" ? "Projects" : "Proyectos"}</h2>
-        <div className={css.cardContainer}>
-          {projects.map((e) => {
-            return (
-              <Cards
-                key={e.name}
-                img={e.img}
-                name={e.name}
-                gitHubLink={e.gitHubLink}
-                deployLink={e.deployLink}
-                infoEspañol={e.infoEspañol}
-                infoEnglish={e.infoEnglish}
-                language={language}
-              />
-            );
-          })}
-        </div>
-      </div>
+      <Projects
+        language={language}
+      />
       <div className={css.technologies}>
         <h2>{language === "EN" ? "Technologies" : "Tecnologias"}</h2>
         <Technologies language={language} />

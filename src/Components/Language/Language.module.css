@@ -18,10 +18,9 @@ span:hover .icon {
     margin-left: 5px;
     font-weight: 600;
     font-size: 14px;
+    user-select: none;
 }
-.container span:hover h4{
-    /* text-shadow: 0 0px  20px var(--main-white); */
-}
+
 .container span {
     display: flex;
     justify-content: center;
