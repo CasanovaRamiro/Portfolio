@@ -1,7 +1,7 @@
 import React from 'react'
 import css from "./Technologies.module.css";
 import { FaReact, FaNodeJs } from 'react-icons/fa'
-import { SiApollographql, SiGraphql, SiNestjs, SiPostgresql, SiRedux, SiCss3, SiGit, SiExpress, SiSequelize, SiJava, SiTypescript, SiMongodb } from 'react-icons/si'
+import { SiApollographql, SiGraphql, SiNestjs, SiPostgresql, SiRedux, SiCss3, SiGit, SiExpress, SiSequelize, SiJava, SiTypescript, SiMongodb, SiVuedotjs, SiTailwindcss } from 'react-icons/si'
 import { DiJavascript1, DiHtml5 } from 'react-icons/di'
 import { TbBrandNextjs } from "react-icons/tb";
 
@@ -24,6 +24,8 @@ function Technologies({ language }) {
                     <div className={css.icon}><h5><SiGit size='50px' /></h5><h5 className={css.abs}>Git</h5></div>
                     <div className={css.icon}><h5><TbBrandNextjs size='50px' /></h5><h5 className={css.abs}>Next.js</h5></div>
                     <div className={css.icon}><h5><SiTypescript size='50px' /></h5><h5 className={css.abs}>TypeScript</h5></div>
+                    <div className={css.icon}><h5><SiVuedotjs size='50px' /></h5><h5 className={css.abs}>Vue.js</h5></div>
+                    <div className={css.icon}><h5><SiTailwindcss size='50px' /></h5><h5 className={css.abs}>Tailwind</h5></div>
                 </div>
             </div>
 
