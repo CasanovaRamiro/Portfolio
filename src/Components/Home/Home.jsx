@@ -12,7 +12,7 @@ function Home() {
   const [spanish] = useState({
     subTitle: "FullStack Dev.",
     description:
-      "Apasionado por el desarrollo web. Aprendizaje constante de nuevas tecnologías. Mas abajo podras ver algunos de mis proyectos. Viviendo en Buenos Aires, Argentina",
+      "Soy un Desarrollador Full Stack altamente capacitado con una sólida base en desarrollo web, actualmente estudiando desarrollo web en la Universidad. Con experiencia en proyectos en tecnologías como Node.js, React, SQL, NoSQL y más, soy apasionado por el código y constantemente busco aprender y adaptarme a las nuevas tecnologías en el mundo de TI. Como profesional orientado al cliente, poseo excelentes habilidades de comunicación, resolución de problemas, trabajo en equipo y autonomía.",
 
   });
   const [language, setLanguage] = useState("EN");
@@ -29,58 +29,60 @@ function Home() {
         handleTranslate={handleTranslate}
         language={language}
       />
-      <div className={css.titleImg}>
-        <div className={css.imgContainer}>
-          <div className={css.img}>
-            <img src={img} alt="Profile Pic" />
+      <div className={css.headSection}>
+        <div className={css.titleImg}>
+          <div className={css.imgContainer}>
+            <div className={css.img}>
+              <img src={img} alt="Profile Pic" />
+            </div>
+            <div className={css.iconContainer}>
+              <span>
+                <a
+                  style={{ textDecoration: "none", color: "var(--main-white)" }}
+                  target="_blank"
+                  href={linkedIn}
+                >
+                  <SiLinkedin size={"30px"} />
+                </a>
+              </span>
+              <span>
+                <a
+                  style={{ textDecoration: "none", color: "var(--main-white)" }}
+                  target="_blank"
+                  href="https://github.com/CasanovaRamiro"
+                >
+                  <SiGithub size={"30px"} />
+                </a>
+              </span>
+              <span>
+                <a
+                  style={{ textDecoration: "none", color: "var(--main-white)" }}
+                  target="_blank"
+                  href={language === "EN" ? CvPdfEnglish : CvPdfSpanish}
+                >
+                  <FaFilePdf size={"30px"} />
+                </a>
+              </span>
+            </div>
           </div>
-          <div className={css.iconContainer}>
-            <span>
-              <a
-                style={{ textDecoration: "none", color: "var(--main-white)" }}
-                target="_blank"
-                href={linkedIn}
-              >
-                <SiLinkedin size={"30px"} />
-              </a>
-            </span>
-            <span>
-              <a
-                style={{ textDecoration: "none", color: "var(--main-white)" }}
-                target="_blank"
-                href="https://github.com/CasanovaRamiro"
-              >
-                <SiGithub size={"30px"} />
-              </a>
-            </span>
-            <span>
-              <a
-                style={{ textDecoration: "none", color: "var(--main-white)" }}
-                target="_blank"
-                href={language === "EN" ? CvPdfEnglish : CvPdfSpanish}
-              >
-                <FaFilePdf size={"30px"} />
-              </a>
-            </span>
-          </div>
-        </div>
 
-        <div className={css.title}>
-          <div className={css.titleSubTitle}>
-            <h1>Ramiro Casanova</h1>
-            <h4>
-              {language === "EN"
-                ? "FullStack Dev."
-                : spanish.subTitle}
-            </h4>
+          <div className={css.title}>
+            <div className={css.titleSubTitle}>
+              <h1>Ramiro Casanova</h1>
+              <h4>
+                {language === "EN"
+                  ? "FullStack Dev."
+                  : spanish.subTitle}
+              </h4>
+            </div>
           </div>
         </div>
+        <h4 className={css.description}>
+          {language === "EN"
+            ? "I am a highly skilled Full Stack Developer with a strong foundation in web development, currently studying web development at the University. With project experience in technologies such as Node.js, React, SQL, NoSQL, and more, I am passionate about coding and constantly strive to learn and adapt to new technologies in the IT world. As a customer-oriented professional, I possess excellent communication, problem-solving, teamwork, and autonomy skills."
+            : spanish.description}
+        </h4>
       </div>
-      <h4 className={css.description}>
-        {language === "EN"
-          ? "Passionate about web development. Always learning new technologies. Here you will see some of projects. Based in Buenos Aires, Argentina"
-          : spanish.description}
-      </h4>
       <Projects
         language={language}
       />
