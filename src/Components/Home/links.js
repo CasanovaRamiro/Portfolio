@@ -1,5 +1,5 @@
 export const linkedIn = "https://www.linkedin.com/in/ramiro-casanova";
 export const CvPdfSpanish =
-  "https://drive.google.com/file/d/1mqOy3qRRnLOK0sokd9Z1hxRUwZTKTLym/view?usp=sharing";
+  "https://drive.google.com/file/d/1RTGflUeGa7ZA_nsWOUSIYgYZ4dpX61qT/view?usp=sharing";
 export const CvPdfEnglish =
-  "https://drive.google.com/file/d/1E9gHtC9SJOScGt-R43_KmatbW4ddMd3h/view?usp=sharing";
+  "https://drive.google.com/file/d/1UFGysTvVMjBHH5mRpNsJHCLdSafU6O7V/view?usp=sharing";
