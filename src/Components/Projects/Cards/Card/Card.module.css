@@ -1,6 +1,8 @@
 .desktopContainer {
+  position: relative;
   width: 300px;
-  height: 150px;
+  max-width: 100%;
+  aspect-ratio: 2 / 1;
   background-size: cover;
   border: solid 1px var(--border-gray);
   border-radius: 10px;
@@ -12,8 +14,10 @@
   box-shadow: 1px 1px 10px var(--border-gray);
 }
 .mobileContainer {
+  position: relative;
   width: 200px;
-  height: 350px;
+  max-width: 100%;
+  aspect-ratio: 4 / 7;
   background-size: cover;
   border: solid 1px var(--border-gray);
   border-radius: 10px;
@@ -27,8 +31,7 @@
 .desktopContainer .layout {
   border-radius: 10px;
   position: absolute;
-  width: 300px;
-  height: 150px;
+  inset: 0;
   transition: 0.2s;
   z-index: 2;
 }
@@ -38,8 +41,7 @@
 .mobileContainer .layout {
   border-radius: 10px;
   position: absolute;
-  width: 200px;
-  height: 350px;
+  inset: 0;
   transition: 0.2s;
   z-index: 2;
 }
@@ -92,10 +94,7 @@
 .overlay {
   background-color: rgba(0, 0, 0, 0.597);
   position: fixed;
-  width: 100vw;
-  height: 100vh;
-  top: 0px;
-  left: 0px;
+  inset: 0;
   z-index: 4;
   display: flex;
   justify-content: center;
@@ -105,15 +104,15 @@
   background-color: var(--border-gray);
   position: fixed;
   width: 600px;
-  max-width: 100%;
+  max-width: calc(100% - 32px);
   height: 400px;
-  max-height: 100vh;
+  max-height: calc(100dvh - 32px);
   border: 2px solid black;
   display: flex;
   flex-direction: row;
   box-shadow: 1px 1px 30px var(--border-gray);
   z-index: 5;
-  overflow-y: scroll;
+  overflow-y: auto;
   overflow-x: hidden;
 }
 .infoCard span {
