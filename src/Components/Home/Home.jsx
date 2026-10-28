@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import css from "./Home.module.css";
 import img from "../Img/gitgub4.jpeg";
 import Technologies from "../Technologies/Technologies";
-import { SiLinkedin, SiGithub } from "react-icons/si";
-import { FaFilePdf } from "react-icons/fa";
+import { SiGithub } from "react-icons/si";
+import { FaFilePdf, FaLinkedin } from "react-icons/fa";
 import Language from "../Language/Language";
 import { linkedIn, CvPdfEnglish, CvPdfSpanish } from './links'
 import Projects from "../Projects/Projects";
@@ -42,7 +42,7 @@ function Home() {
                   target="_blank"
                   href={linkedIn}
                 >
-                  <SiLinkedin size={"30px"} />
+                  <FaLinkedin size={"30px"} />
                 </a>
               </span>
               <span>

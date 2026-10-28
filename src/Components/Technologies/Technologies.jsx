@@ -1,7 +1,7 @@
 import React from 'react'
 import css from "./Technologies.module.css";
-import { FaReact, FaNodeJs } from 'react-icons/fa'
-import { SiApollographql, SiGraphql, SiNestjs, SiPostgresql, SiRedux, SiCss3, SiGit, SiExpress, SiSequelize, SiJava, SiTypescript, SiMongodb, SiVuedotjs, SiTailwindcss } from 'react-icons/si'
+import { FaReact, FaNodeJs, FaJava } from 'react-icons/fa'
+import { SiApollographql, SiGraphql, SiNestjs, SiPostgresql, SiRedux, SiCss, SiGit, SiExpress, SiSequelize, SiTypescript, SiMongodb, SiVuedotjs, SiTailwindcss } from 'react-icons/si'
 import { DiJavascript1, DiHtml5 } from 'react-icons/di'
 import { TbBrandNextjs } from "react-icons/tb";
 
@@ -18,7 +18,7 @@ function Technologies({ language }) {
                 <div className={css.iconSection}>
                     <div className={css.icon}><h5><FaReact size='50px' /></h5><h5 className={css.abs}>React</h5></div>
                     <div className={css.icon}><h5><SiRedux size='50px' /></h5><h5 className={css.abs}>Redux</h5></div>
-                    <div className={css.icon}><h5><SiCss3 size='50px' /></h5><h5 className={css.abs}>CSS 3</h5></div>
+                    <div className={css.icon}><h5><SiCss size='50px' /></h5><h5 className={css.abs}>CSS 3</h5></div>
                     <div className={css.icon}><h5><DiJavascript1 size='50px' /></h5><h5 className={css.abs}>JavaScript</h5></div>
                     <div className={css.icon}><h5><DiHtml5 size='50px' /></h5><h5 className={css.abs}>HTML 5</h5></div>
                     <div className={css.icon}><h5><SiGit size='50px' /></h5><h5 className={css.abs}>Git</h5></div>
@@ -47,7 +47,7 @@ function Technologies({ language }) {
             <div className={css.techContainer}>
                 <h3>{language === 'EN' ? 'In Progress' : 'En Progreso'}</h3>
                 <div className={css.iconSection}>
-                    <div className={css.icon}><h5><SiJava size='50px' /></h5><h5 className={css.abs}>Java</h5></div>
+                    <div className={css.icon}><h5><FaJava size='50px' /></h5><h5 className={css.abs}>Java</h5></div>
                     <div className={css.icon}><h5><SiGraphql size='50px' /></h5><h5 className={css.abs}>GraphQL</h5></div>
                     <div className={css.icon}><h5><SiApollographql size='50px' /></h5><h5 className={css.abs}>Apollo</h5></div>
                 </div>
