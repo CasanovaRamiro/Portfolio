@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { createPortal } from "react-dom";
 import css from "./Card.module.css";
 import dogsImage from '../../../Img/Captura-Dogs-App.png'
 import ecommerceImage from '../../../Img/Captura-ecommerce.png'
@@ -26,7 +27,7 @@ function Card({ img, name, gitHubLink, deployLink, infoEspañol, infoEnglish, la
 
   return (
     <div className={css.contDeCont}>
-      {infoModal ? <div className={css.overlay}><div className={css.overlay} onClick={() => handleInfoModal()}></div>
+      {infoModal ? createPortal(<div className={css.overlay}><div className={css.overlay} onClick={() => handleInfoModal()}></div>
         <div className={css.infoCard}>
 
           <div className={css.infoContainer}>
@@ -37,7 +38,7 @@ function Card({ img, name, gitHubLink, deployLink, infoEspañol, infoEnglish, la
           <span ><AiOutlineCloseSquare size={'30px'} onClick={() => handleInfoModal()} /></span>
 
         </div>
-      </div> : null}
+      </div>, document.body) : null}
       <div className={mobile ? css.mobileContainer : css.desktopContainer} style={{ backgroundImage: `url(${image})` }}>
         <div className={css.layout}>
           {alt ? <div className={css.iconContainer} >
