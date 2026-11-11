@@ -1,11 +1,6 @@
 import React, { useState } from "react";
 import { createPortal } from "react-dom";
 import css from "./Card.module.css";
-import dogsImage from '../../../Img/Captura-Dogs-App.png'
-import ecommerceImage from '../../../Img/Captura-ecommerce.png'
-import ecommerceMobile from '../../../Img/ecommerce-mobile.png'
-import ITCrowd from '../../../Img/ItCrowd.png'
-import ITCrowdMobile from '../../../Img/itCrowd-mobile.png'
 import shipIt from '../../../Img/ship-it.png'
 import shipItMobile from '../../../Img/ship-it-mobile.png'
 import { FaExternalLinkAlt, } from 'react-icons/fa'
@@ -23,9 +18,6 @@ function Card({ img, name, gitHubLink, deployLink, infoEspañol, infoEnglish, la
   }
   const alt = useMediaQuery('(min-width: 650px)')
   let image
-  if (img === 'ecommerce') { mobile ? image = ecommerceMobile : image = ecommerceImage }
-  if (img === 'dogs') { image = dogsImage }
-  if (img === 'ITCrowd') { mobile ? image = ITCrowdMobile : image = ITCrowd }
   if (img === 'shipIt') { mobile ? image = shipItMobile : image = shipIt }
 
   return (
