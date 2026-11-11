@@ -1,63 +1,39 @@
 import React, { useState } from 'react'
+import { m } from 'motion/react'
 import useProjectsInfo from '../../Hooks/useProjectsInfo';
 import Card from './Cards/Card/Card';
 import css from './Projects.module.css'
 import SwitchMobileDesktop from './SwitchMobileDesktop/SwitchMobileDesktop';
-// AiOutlineDesktop
+import { rise, stagger } from '../Section/variants';
 
-
+// Animates through the parent Section's variants, so it replays on every visit.
 function Projects({ language }) {
   const projects = useProjectsInfo()
-
   const [mobile, setMobile] = useState(false)
-  const handleSwitch = () => {
-    setMobile(!mobile)
-  }
+  const visible = mobile ? projects.filter((p) => p.mobile) : projects
 
   return (
-    <div className={css.projects}>
-      <div className={css.header}>
-        <h2>{language === "EN" ? "Projects" : "Proyectos"}<SwitchMobileDesktop
-          handleSwitch={handleSwitch}
-        /></h2>
-
-
-      </div>
+    <m.div className={css.projects} variants={stagger(0.14, 0)}>
+      <m.div className={css.header} variants={rise}>
+        <h2>
+          {language === "EN" ? "Projects" : "Proyectos"}
+          <span className={css.count}>{String(visible.length).padStart(2, '0')}</span>
+        </h2>
+        <SwitchMobileDesktop mobile={mobile} onChange={setMobile} language={language} />
+      </m.div>
 
       <div className={css.cardContainer}>
-        {!mobile ? projects.map((e) => {
-          return (
-            <Card
-              key={e.name}
-              img={e.img}
-              name={e.name}
-              gitHubLink={e.gitHubLink}
-              deployLink={e.deployLink}
-              infoEspañol={e.infoEspañol}
-              infoEnglish={e.infoEnglish}
-              language={language}
-              mobile={mobile}
-            />
-          );
-        }) :
-          projects.filter(e => e.mobile == true).map((e) => {
-            return (
-              <Card
-                key={e.name}
-                img={e.img}
-                name={e.name}
-                gitHubLink={e.gitHubLink}
-                deployLink={e.deployLink}
-                infoEspañol={e.infoEspañol}
-                infoEnglish={e.infoEnglish}
-                language={language}
-                mobile={mobile}
-              />
-            );
-          })
-        }
+        {visible.map((project, i) => (
+          <Card
+            key={project.name}
+            project={project}
+            index={i}
+            language={language}
+            mobile={mobile}
+          />
+        ))}
       </div>
-    </div>
+    </m.div>
   )
 }
 
