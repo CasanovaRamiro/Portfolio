@@ -71,9 +71,7 @@ function Home() {
       </Section>
 
       <Section id="projects" cue={{ href: "#technologies", label: t.scroll }}>
-        <m.div variants={rise}>
-          <Projects language={language} />
-        </m.div>
+        <Projects language={language} />
       </Section>
 
       <Section id="technologies" cue={{ href: "#home", label: t.top, up: true }}>

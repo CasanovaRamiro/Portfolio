@@ -1,11 +1,25 @@
 import React from 'react'
-import { AiOutlineMobile } from "react-icons/ai";
+import { AiOutlineDesktop, AiOutlineMobile } from "react-icons/ai";
 import css from './SwitchMobileDesktop.module.css'
-function SwitchMobileDesktop({ handleSwitch }) {
+
+const labels = {
+  EN: { group: 'Preview', desktop: 'Desktop', mobile: 'Mobile' },
+  ES: { group: 'Vista previa', desktop: 'Escritorio', mobile: 'Móvil' },
+}
+
+function SwitchMobileDesktop({ mobile, onChange, language }) {
+  const t = labels[language]
   return (
-    <div className={css.container}>
-      <input type="checkbox" className={css.iosSwitch} onClick={() => handleSwitch()} /><div><div></div></div>
-      <span><AiOutlineMobile size={'30px'} /></span>
+    <div className={`${css.switch} ${mobile ? css.isMobile : ''}`} role="group" aria-label={t.group}>
+      <span className={css.pill} aria-hidden="true" />
+      <button type="button" className={css.option} aria-pressed={!mobile} aria-label={t.desktop} onClick={() => onChange(false)}>
+        <AiOutlineDesktop size="18px" aria-hidden="true" />
+        <span>{t.desktop}</span>
+      </button>
+      <button type="button" className={css.option} aria-pressed={mobile} aria-label={t.mobile} onClick={() => onChange(true)}>
+        <AiOutlineMobile size="18px" aria-hidden="true" />
+        <span>{t.mobile}</span>
+      </button>
     </div>
   )
 }
